@@ -34,6 +34,7 @@ class Player(pygame.sprite.Sprite):
         self.rect.centerx = WIDTH / 2
         self.rect.bottom = HEIGHT - 10
         self.speedx = 0
+        self.radius = 20
 
     def update(self):
         self.speedx = 0
@@ -63,6 +64,7 @@ class Mob(pygame.sprite.Sprite):
         self.rect.y = random.randrange(-100,-40)
         self.speedy = random.randrange(1,8)
         self.speedx = random.randrange(-3,3)
+        self.radius = int(self.rect.width * 0.85 / 2)
 
     def update(self):
         self.rect.x += self.speedx
@@ -129,7 +131,7 @@ while running:
         mobs.add(m)
 
     # check to see if a mob hit the player
-    hits = pygame.sprite.spritecollide(player,mobs,False)
+    hits = pygame.sprite.spritecollide(player,mobs,False,pygame.sprite.collide_circle)
     print(hits)
     if hits:
         running = False
