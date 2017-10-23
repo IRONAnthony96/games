@@ -147,7 +147,7 @@ for i in range(8):
     mobs.add(m)
 
 score = 0
-pygame.mixer.music.play(loop=-1)
+pygame.mixer.music.play(loops=-1)
 # Game loop
 running = True
 while running:
