@@ -4,4 +4,6 @@
 
 效果如图：
 
-![](https://github.com/viljw/Game/blob/master/img/shmup_sample.gif)
+<div style="align: center">
+<img src="/img/shmup_sample.gif"/>
+</div>
